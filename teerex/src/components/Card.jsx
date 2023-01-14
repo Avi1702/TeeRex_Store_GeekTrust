@@ -13,7 +13,7 @@ let {AddToCart}=useContext(CartItems)
       <img src={Item.imageURL}></img>
       <h3>{Item.name}</h3>
       <h3>₹{Item.price}</h3>
-      <button onClick={()=>{AddToCart(Item.id)}}>Add To Cart</button>
+      <button onClick={()=>{AddToCart(Item.id)}} >Add To Cart</button>
     </div>
   )
 }

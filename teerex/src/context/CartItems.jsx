@@ -1,6 +1,7 @@
 import React, { createContext } from 'react'
 import { useState } from 'react'
 import axios from "axios"
+import { useEffect } from 'react'
 
 
 export const CartItems= createContext()
@@ -15,16 +16,29 @@ export const CartItemsProvider = ({children}) => {
 
 
 
-    const InitialFetch=async()=>(
+    // const InitialFetch=async()=>(
   
+    
+    // )
+  
+    useEffect(()=>{
       axios.get("https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json?limit=6")
       .then((res)=>{setData(res.data)})
       .catch((err)=>{alert(err)})
-    )
-  
-    InitialFetch()
+    },[])
+    // InitialFetch()
 
 
+    const Filtering=(color,gender,price,type)=>{
+//  console.log(color,gender,type,price)
+      let temp=price.split("-")
+      console.log(temp)
+      let filter= data.filter((item)=>{
+        if(item.price>=[+temp[0]] && item.price<=[+temp[1]]){
+          return item
+        }})
+       
+    }
 
 
 
@@ -77,7 +91,7 @@ export const CartItemsProvider = ({children}) => {
     
 
   return (
-    <CartItems.Provider value={{itemCount, data, cartItem,AddToCart,DeleteItem,DecreaseItem}}>
+    <CartItems.Provider value={{itemCount, data, cartItem,AddToCart,DeleteItem,DecreaseItem,Filtering}}>
         {children}
     </CartItems.Provider>
   )
