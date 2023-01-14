@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    display: inline-block;
+    margin-left: 0;
+    width: 3%;
+    height: 90%;
+}
+#navbar{
+
+    width: 100%;
+    position: fixed;
+    height: 5vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-size-adjust: 20vw;
+    background-color: bisque;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#navbar>div{
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbar>div img{
+    width: 20px;
+    height: 20px;
+}
+
