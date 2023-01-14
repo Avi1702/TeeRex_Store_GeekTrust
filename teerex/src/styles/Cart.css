@@ -1,0 +1,11 @@
+#cart{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    width: 60%;
+    height: 500px;
+    margin-top: 60px;
+    background-color: whitesmoke;
+    background:none;
+    box-shadow: rgba(50, 50, 93, 0.25)
+}

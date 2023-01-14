@@ -1,0 +1,32 @@
+#filter{
+    position: sticky;
+    top:0;
+    left: 2%;
+    display: inline-block;
+    width: 25%;
+    height: 500px;
+    margin-top: 60px;
+    background-color: whitesmoke;
+    opacity: 0.7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#filter>div{
+    width: 70%;
+    height: 18%;  
+    padding: 10px;
+    text-align: start;
+    background-color: rgb(111, 153, 191);
+    opacity: 5;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+
