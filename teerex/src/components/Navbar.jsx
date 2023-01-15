@@ -7,11 +7,10 @@ import { useContext } from 'react'
 import { CartItems } from '../context/CartItems'
 export const Navbar = () => {
 
-  let {itemCount}=useContext(CartItems)
+  let {itemCount}=useContext(CartItems)  /*Accessing the total count of cart items from context `CartItems` */
   
   return (
     <div id='main'>
-
         <div id="navbar">
                <img id="logo" src={Logo}></img>
                <div>

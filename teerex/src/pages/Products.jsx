@@ -11,15 +11,13 @@ import { Filter } from '../components/Filter'
 
 export const Products = () => {
 
-  let {filterData}=useContext(CartItems)
+  let {filterData}=useContext(CartItems)  /*Getting data from context `CartItems` */
 
-
- 
   return (
     <div id='products'>
 
       {
-        filterData.map((item)=>{return <Card Item={item} />})
+        filterData.map((item)=>{return <Card Item={item} />})  /*displaying the data by sending it as `prop` to component `Card` */
       }
       
     </div>

@@ -7,16 +7,15 @@ import "../styles/Filter.css"
 export const Filter = () => {
 
   
-  let {Filtering}=useContext(CartItems)
+  let {Filtering}=useContext(CartItems)    /*Accessing filtering function form Context `cartItems` */   
 
-  const [filter,setFilter]=useState({color:"",gender:"",price:"",type:""})
+  const [filter,setFilter]=useState({color:"",gender:"",price:"",type:""})  /*State to keep track what user has selected as filter*/
 
+
+   /*Function to save user input data*/
   const handleChange=(e)=>{
-
     let {name,value}=e.target
-
     setFilter({...filter,[name]:value})
-
     Filtering(color,gender,price,type)
   }
 
@@ -28,6 +27,8 @@ export const Filter = () => {
         <h2>Filter</h2>
         <div>
           
+         /*Filter by color*/
+
          <h3>Colour</h3>
          <form>
          <input onChange={handleChange} type="radio" name="color" id="Red" value="Red"></input>
@@ -39,6 +40,9 @@ export const Filter = () => {
          </form>
         </div>
         <div>
+
+         /*Filter by Gender*/
+
             <h3>Gender</h3>
           <form>  
         <input onChange={handleChange} type="radio" name="gender" id="Men" value="Men"></input>
@@ -49,6 +53,9 @@ export const Filter = () => {
         </div>
         
         <div>
+
+         /*Filter by Price*/
+
             <h3>Price</h3>
             <form>
         <input onChange={handleChange} type="radio" name="price" id="0-250" value="0-250"></input>
@@ -60,6 +67,9 @@ export const Filter = () => {
          </form>
         </div>
         <div>
+
+         /*Filter by Type*/
+
             <h3>Type</h3>
             <form>
             <input onChange={handleChange} type="radio" name="type" id="Polo" value="Polo"></input>

@@ -1,20 +1,16 @@
 import React, { useContext } from 'react'
-import { Card } from '../components/Card'
 import { CartItems } from '../context/CartItems'
 import "../styles/Cart.css"
 import empty from "../images/EmptyCart.png"
-import { useState } from 'react'
-import { Navbar } from '../components/Navbar'
+
 
 export const Cart = () => {
 
-  let {cartItem,AddToCart,DecreaseItem,DeleteItem}=useContext(CartItems)
-  // const [count,setCount]=useState(0)
-  let total=0
-  return (
+  let {cartItem,AddToCart,DecreaseItem,DeleteItem}=useContext(CartItems) /* Accessing values from context CartItems */
 
-   
-    <div id='cart'>
+  let total=0   /*To keep track the total amount of cart items*/
+  return (
+<div id='cart'>
      { cartItem.length===0?<img src={empty} id="emptycart"></img>:
       <table>
         <thead>
@@ -26,6 +22,8 @@ export const Cart = () => {
           <th>Delete</th>
         </tr>
         </thead>
+
+        /*Displaying cart items in table format*/
         <tbody>
         {
         cartItem.map((item)=>{
