@@ -3,10 +3,13 @@ import { Card } from '../components/Card'
 import { CartItems } from '../context/CartItems'
 import "../styles/Cart.css"
 import empty from "../images/EmptyCart.png"
+import { useState } from 'react'
+import { Navbar } from '../components/Navbar'
 
 export const Cart = () => {
 
   let {cartItem,AddToCart,DecreaseItem,DeleteItem}=useContext(CartItems)
+  // const [count,setCount]=useState(0)
   let total=0
   return (
 

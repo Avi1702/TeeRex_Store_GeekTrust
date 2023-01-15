@@ -5,7 +5,8 @@
     width: auto;
     margin-top: 60px;
     background-color: whitesmoke;
-    opacity: 0.7;
+    background-color: aquamarine;
+    /* opacity: 0.7; */
     display: grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,250px);

@@ -6,11 +6,13 @@ import "../styles/Filter.css"
 
 export const Filter = () => {
 
+  
   let {Filtering}=useContext(CartItems)
 
   const [filter,setFilter]=useState({color:"",gender:"",price:"",type:""})
 
   const handleChange=(e)=>{
+
     let {name,value}=e.target
 
     setFilter({...filter,[name]:value})

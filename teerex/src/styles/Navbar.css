@@ -38,5 +38,17 @@
     height: 20px;
 }
 
+#count{
+    /* display: inline; */
+    position: absolute;
+    top: 0;
+    right:24.5%; 
+     width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: yellow;
+}
+
 
 

@@ -6,17 +6,20 @@ import "../styles/Products.css"
 import { Card } from '../components/Card'
 import { useContext } from 'react'
 import { CartItems } from '../context/CartItems'
+import { useState } from 'react'
+import { Filter } from '../components/Filter'
 
 export const Products = () => {
 
-  let {data}=useContext(CartItems)
+  let {filterData}=useContext(CartItems)
 
 
+ 
   return (
     <div id='products'>
-      {/* <h3>Products</h3><br/> */}
+
       {
-        data.map((item)=>{return <Card Item={item} />})
+        filterData.map((item)=>{return <Card Item={item} />})
       }
       
     </div>
