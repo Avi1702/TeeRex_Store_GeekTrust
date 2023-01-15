@@ -23,8 +23,8 @@ export const Cart = () => {
         </tr>
         </thead>
 
-        /*Displaying cart items in table format*/
-        <tbody>
+{        /*Displaying cart items in table format*/
+}        <tbody>
         {
         cartItem.map((item)=>{
         total += item.count*[+item.price]

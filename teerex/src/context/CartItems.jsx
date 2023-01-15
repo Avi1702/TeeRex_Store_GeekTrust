@@ -109,9 +109,22 @@ export const CartItemsProvider = ({children}) => {
 
   }
 
+  const SearchItem=(val)=>{
+
+     let filter=data.filter((item)=>{return item.name.includes(val)})
+     console.log(filter)
+
+     if(filter.length>0){
+      setFilterData(filter)
+     }
+     else{
+      alert("Item not found or Try by keeping first letter as capital letter")
+     }
+  }
+
  
   return (
-    <CartItems.Provider value={{itemCount, data, cartItem,filterData,AddToCart,DeleteItem,DecreaseItem,Filtering}}>
+    <CartItems.Provider value={{itemCount, data, cartItem,filterData,AddToCart,DeleteItem,DecreaseItem,Filtering,SearchItem}}>
         {children}
     </CartItems.Provider>
   )

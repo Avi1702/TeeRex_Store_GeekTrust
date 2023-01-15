@@ -27,7 +27,7 @@ export const Filter = () => {
         <h2>Filter</h2>
         <div>
           
-         /*Filter by color*/
+         {/*Filter by color*/}
 
          <h3>Colour</h3>
          <form>
@@ -41,7 +41,7 @@ export const Filter = () => {
         </div>
         <div>
 
-         /*Filter by Gender*/
+         {/*Filter by Gender*/}
 
             <h3>Gender</h3>
           <form>  
@@ -54,7 +54,7 @@ export const Filter = () => {
         
         <div>
 
-         /*Filter by Price*/
+         {/*Filter by Price*/}
 
             <h3>Price</h3>
             <form>
@@ -68,7 +68,7 @@ export const Filter = () => {
         </div>
         <div>
 
-         /*Filter by Type*/
+         {/*Filter by Type*/}
 
             <h3>Type</h3>
             <form>
